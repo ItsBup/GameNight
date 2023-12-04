@@ -1,4 +1,6 @@
 import { AppState } from "../AppState.js"
+import { Player } from "../models/Player.js"
+import { playerService } from "../services/PlayerService.js"
 
 export class PlayerController {
   constructor() {
