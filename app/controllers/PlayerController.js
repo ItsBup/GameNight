@@ -23,7 +23,11 @@ export class PlayerController {
     this.drawPlayer()
   }
   addPlayer(){
-    let newName = FormData.get('name')
+    event.preventDefault()
+    const form = event.target
+    let newName = form.name.value
+    console.log(name)
+    
     playerService.addPlayer(newName)
     this.drawPlayer()
   }
