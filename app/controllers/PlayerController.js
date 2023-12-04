@@ -1,6 +1,6 @@
 import { AppState } from "../AppState.js"
 import { Player } from "../models/Player.js"
-import { PlayerService } from "../services/PalyerService.js"
+import { PlayerService } from "../services/PlayerService.js"
 
 export class PlayerController {
   constructor() {
@@ -8,16 +8,18 @@ export class PlayerController {
     this.drawPlayer()
   }
   drawPlayer(){
-    const players = AppState.characters
+    const players = AppState.players
     let content = ''
     players.forEach(player => content += player.playerTemplate())
     document.getElementById('player-list').innerHTML = content
   }
 
-  addPoint(){
-
+  addPoint(playerName){
+    PlayerService.addpoint(playerName)
+    this.drawPlayer
   }
-  losePoint(){
-    
+  losePoint(playerName){
+    PlayerService.losepoint(playerName)
+    this.drawPlayer
   }
 }

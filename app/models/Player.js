@@ -7,13 +7,13 @@ export class Player {
     return `      <div class="container mt-5">
     <div class="row bg-dark text-light align-items-center text-center justify-content-center">
       <div class="col-2">
-        name
+        ${this.name}
       </div>
-      <button class="col-2 btn btn-warning">-</button>
+      <button onclick="app.PlayerController.losePoint(${this.name})" class="col-2 btn btn-warning">-</button>
       <div class="col-2">
-        score
+        ${this.score}
       </div>
-      <button class="col-2 btn btn-warning">+</button>
+      <button onclick="app.PlayerController.addPoint(${this.name})" class="col-2 btn btn-warning">+</button>
     </div>
   </div>`
   }
