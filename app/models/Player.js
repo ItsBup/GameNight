@@ -1,4 +1,6 @@
 export class Player {
+  name
+  score
   constructor(name) {
     this.name = name;
     this.score = 0;
@@ -10,11 +12,11 @@ export class Player {
         <div class="col-2">
           ${this.name}
         </div>
-        <button onclick="app.PlayerController.losePoint(${this.name})" class="col-2 btn btn-warning">-</button>
+        <button onclick="app.PlayerController.losePoint('${this.name}')" class="col-2 btn btn-warning">-</button>
         <div class="col-2">
           ${this.score}
         </div>
-        <button onclick="app.PlayerController.addPoint(${this.name})" class="col-2 btn btn-warning">+</button>
+        <button onclick="app.PlayerController.addPoint('${this.name}')" class="col-2 btn btn-warning">+</button>
       </div>
     </div>
     `

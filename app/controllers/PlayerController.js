@@ -15,16 +15,16 @@ export class PlayerController {
   }
 
   addPoint(playerName){
-    PlayerService.addPoint(playerName)
+    playerService.addPoint(playerName)
     this.drawPlayer
   }
   losePoint(playerName){
-    PlayerService.losePoint(playerName)
+    playerService.losePoint(playerName)
     this.drawPlayer
   }
   addPlayer(){
     let newName = window.prompt('what is your name')
-    PlayerService.addPlayer(newName)
+    playerService.addPlayer(newName)
     this.drawPlayer()
   }
 }
