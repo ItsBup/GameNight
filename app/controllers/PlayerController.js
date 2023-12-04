@@ -26,8 +26,6 @@ export class PlayerController {
     event.preventDefault()
     const form = event.target
     let newName = form.name.value
-    console.log(name)
-    
     playerService.addPlayer(newName)
     this.drawPlayer()
   }
