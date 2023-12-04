@@ -1,6 +1,5 @@
 import { AppState } from "../AppState.js"
-import { Player } from "../models/Player.js"
-import { PlayerService } from "../services/PlayerService.js"
+import { playerService } from "../services/PlayerService.js"
 
 export class PlayerController {
   constructor() {
@@ -15,11 +14,16 @@ export class PlayerController {
   }
 
   addPoint(playerName){
-    PlayerService.addpoint(playerName)
+    PlayerService.addPoint(playerName)
     this.drawPlayer
   }
   losePoint(playerName){
-    PlayerService.losepoint(playerName)
+    PlayerService.losePoint(playerName)
     this.drawPlayer
+  }
+  addPlayer(){
+    let newName = window.prompt('what is your name')
+    PlayerService.addPlayer(newName)
+    this.drawPlayer()
   }
 }

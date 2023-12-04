@@ -5,8 +5,14 @@ import { createObservableProxy } from './utils/ObservableProxy.js'
 class ObservableAppState extends EventEmitter {
 
   /**@type {import('./models/Player.js').Example[]} */
-  players = [new Player("Steve"), new Player("Bob"), new Player("Roxi")];
   examples = []
+
+  players = [
+    new Player("Steve"), 
+    new Player("Bob"), 
+    new Player("Roxi")
+  ];
+
 }
 
 

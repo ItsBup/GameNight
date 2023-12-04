@@ -2,8 +2,9 @@ import { AppState } from "../AppState.js";
 import { Player } from "../models/Player.js";
 
 class PlayerService {
-  addMessage(message) {
-    AppState.examples.push(new Player(message))
+  addPlayer(newName) {
+    let createdPlayer = new Player(newName)
+    AppState.players.push(createdPlayer)
   }
   addPoint(playerName){
     let selectedPlayer = AppState.players.find(player => player.name == playerName)
@@ -15,4 +16,4 @@ class PlayerService {
   }
 }
 
-export const PlayerService = new PlayerService()
+export const playerService = new PlayerService()
