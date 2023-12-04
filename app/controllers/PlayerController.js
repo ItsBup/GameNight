@@ -23,7 +23,7 @@ export class PlayerController {
     this.drawPlayer()
   }
   addPlayer(){
-    let newName = window.prompt('what is your name')
+    let newName = FormData.get('name')
     playerService.addPlayer(newName)
     this.drawPlayer()
   }
